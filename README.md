@@ -1,0 +1,3 @@
+1. I made the first one using my own brain. I imported and then compared the values using if and elif statements, then printed the output accordingly.
+2. The second one is a lot more complicated. I don't know why Code with Harry made it so complicated with all those dictionaries. I believe the first one is the simpler and easier for beginner. now i get it, It's because we don't have to type snake, water, or gun every time, And to avoid typos like "snak" instead of "snake" 
+3. the shortened version Can work but is not understandable or readable, and you won't know the logic behind the code. 

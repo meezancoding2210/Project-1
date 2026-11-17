@@ -39,3 +39,14 @@ else:
 
     else: 
         print("Invalid choice, Please enter snake, water, or gun")
+
+you_count = 0 
+comp_count = 0
+
+if((your_choice - compter_choice) == -2 or (your_choice - compter_choice == 1) ):
+    comp_count += 1
+elif((your_choice - compter_choice) == 2 or (your_choice - compter_choice == -1) ):
+    you_count += 1
+
+print(f"You : {you_count}\nComputer : {comp_count}")
+

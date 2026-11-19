@@ -4,49 +4,49 @@ import random
 1 = water
 0 = gun
 -1 = snake'''
+for i in range(4):
+    compter_choice = random.choice([0, 1, -1]) #random module selects a random value from the given list.
 
-compter_choice = random.choice([0, 1, -1]) #random module selects a random value from the given list.
+    your_string = input("Enter your choice ") #enter "g", "w", "s".
 
-your_string = input("Enter your choice ") #enter "g", "w", "s".
-
-options_dictionary ={"w" : -1 , "g" : 0, "s" : 1 } #1. so user wont have to write the whole word, just one letter like "s"
-your_choice = options_dictionary[your_string] #2. users key like "s" is converted to its value  i.e 1 and then stored in your_choice
-reverse_options_dict = {-1 : "water", 0 : "gun", 1 : "snake"} #3. users converted value i.e 1 then gets the whole word i.e "snake" from reverse_options_dict
+    options_dictionary ={"w" : -1 , "g" : 0, "s" : 1 } #1. so user wont have to write the whole word, just one letter like "s"
+    your_choice = options_dictionary[your_string] #2. users key like "s" is converted to its value  i.e 1 and then stored in your_choice
+    reverse_options_dict = {-1 : "water", 0 : "gun", 1 : "snake"} #3. users converted value i.e 1 then gets the whole word i.e "snake" from reverse_options_dict
 
 
-print(f"Your choice is {reverse_options_dict[your_choice]}\nComputer's choice is {reverse_options_dict[compter_choice]}") #4. users word is printed through reverse_options_dict[your_choice]
+    print(f"Your choice is {reverse_options_dict[your_choice]}\nComputer's choice is {reverse_options_dict[compter_choice]}") #4. users word is printed through reverse_options_dict[your_choice]
 
-if(your_choice == compter_choice):
-    print("Its a tie")
-else:
-    if(your_choice == 1 and compter_choice == -1): # your_choice - computer choice ie 1 - (-1) = 2
-        print("You win")
+    if(your_choice == compter_choice):
+        print("Its a tie")
+    else:
+        if(your_choice == 1 and compter_choice == -1): # your_choice - computer choice ie 1 - (-1) = 2
+            print("You win")
 
-    elif(your_choice == 1 and compter_choice == 0): # 1 - 0 = 1
-        print("You lose")
+        elif(your_choice == 1 and compter_choice == 0): # 1 - 0 = 1
+            print("You lose")
 
-    elif(your_choice == 0 and compter_choice == -1): # 0 -(-1) = 1
-        print("You Lose")
+        elif(your_choice == 0 and compter_choice == -1): # 0 -(-1) = 1
+            print("You Lose")
 
-    elif(your_choice == 0 and compter_choice == 1): #0 - 1 = -1
-        print("You Win")
+        elif(your_choice == 0 and compter_choice == 1): #0 - 1 = -1
+            print("You Win")
 
-    elif(your_choice == -1 and compter_choice == 0): #-1 - 0 = -1
-        print("You win") 
+        elif(your_choice == -1 and compter_choice == 0): #-1 - 0 = -1
+            print("You win") 
 
-    elif(your_choice == -1 and compter_choice == 1): #-1 - 1 = -2
-        print("You lose")
+        elif(your_choice == -1 and compter_choice == 1): #-1 - 1 = -2
+            print("You lose")
 
-    else: 
-        print("Invalid choice, Please enter snake, water, or gun")
+        else: 
+            print("Invalid choice, Please enter snake, water, or gun")
+    if(i == 0):  #if its the first round, then take both values as 0, otherwise start with the stored value     
+        comp_count = 0
+        you_count = 0
 
-you_count = 0 
-comp_count = 0
+    if((your_choice - compter_choice) == -2 or (your_choice - compter_choice == 1) ):
+        comp_count += 1
+    elif((your_choice - compter_choice) == 2 or (your_choice - compter_choice == -1) ):
+        you_count += 1
 
-if((your_choice - compter_choice) == -2 or (your_choice - compter_choice == 1) ):
-    comp_count += 1
-elif((your_choice - compter_choice) == 2 or (your_choice - compter_choice == -1) ):
-    you_count += 1
-
-print(f"You : {you_count}\nComputer : {comp_count}")
+    print(f"You : {you_count}\nComputer : {comp_count}")
 
